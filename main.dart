@@ -1,5 +1,4 @@
 void main() {
-  final String name = 'Son';
-
-  name = 'Lee';
+  const API_URL = 'https://api';
+  // final response = fetchAPI("https://api"); // O
 }
