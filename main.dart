@@ -1,6 +1,5 @@
 void main() {
-  String? name = 'Son';
+  final String name = 'Son';
 
-  name = null;
-  name?.length;
+  name = 'Lee';
 }
