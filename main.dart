@@ -1,7 +1,6 @@
 void main() {
-  dynamic name;
+  String? name = 'Son';
 
-  if (name is String) {
-    // name.length;
-  }
+  name = null;
+  name?.length;
 }
