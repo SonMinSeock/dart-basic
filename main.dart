@@ -1,12 +1,6 @@
 void main() {
-  // 리스트 선언 하는방법 두 가지 있음.
-  // var numbers = [1, 2, 3, 4];
-  var oldFriends = ['nico', 'lynn'];
-  var newFriends = [
-    'lewis',
-    'ralph',
-    'darren',
-    for (var friend in oldFriends) '💕 $friend'
+  List<Map<String, Object>> players = [
+    {'name': 'Son', 'xp': 199932.323},
+    {'name': 'Nico', 'xp': 199932.634}
   ];
-  print(newFriends);
 }
