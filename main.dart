@@ -1,7 +1,8 @@
-String sayHello({required String name, required age, required String country}) {
+String sayHello(String name, int age, [String? country = '대한민국']) {
   return "Hello $name, you are $age, and you come from $country.";
 }
 
 void main() {
-  print(sayHello(country: "대한민국", name: "손민석", age: 27));
+  var results = sayHello("손민석", 27);
+  print(results);
 }
