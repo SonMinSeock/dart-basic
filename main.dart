@@ -1,6 +1,9 @@
-void main() {
-  String? name;
+typedef UserInfo = Map<String, String>;
 
-  name ??= 'Son';
-  print(name);
+String sayHi(UserInfo userInfo) {
+  return "Hi ${userInfo['name']}";
+}
+
+void main() {
+  print(sayHi({'name': '손민석'}));
 }
