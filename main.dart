@@ -1,14 +1,18 @@
 class Player {
-  final String name = 'Son';
-  int xp = 1500;
+  final String name;
+  int xp;
+
+  Player(this.name, this.xp);
 
   void sayHello() {
-    var name = 'lalala';
     print("Hi my name is ${this.name}");
   }
 }
 
 void main() {
-  var user = Player();
-  user.sayHello();
+  var player1 = Player('Son', 1500);
+  var player2 = Player('Lee', 1300);
+
+  player1.sayHello();
+  player2.sayHello();
 }
