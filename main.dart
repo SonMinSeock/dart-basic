@@ -1,32 +1,25 @@
-abstract class Human {
-  void walk();
+class Human {
+  final String name;
+  Human({required this.name});
+  void sayHello() {
+    print("Hi my name is $name");
+  }
 }
 
 enum Team { red, blue }
 
-enum XPLevel { beginner, medium, pro }
-
 class Player extends Human {
-  String name;
-  XPLevel xp;
-  Team team;
+  final Team team;
+  Player({required this.team, required String name}) : super(name: name);
 
-  Player({required this.name, required this.xp, required this.team});
-
+  @override
   void sayHello() {
-    print("Hi my name is ${this.name}");
-  }
-
-  void walk() {
-    print("I'm walking!");
+    super.sayHello();
+    print("and i play for ${team.name}");
   }
 }
 
 void main() {
-  var son = Player(name: 'Son', xp: XPLevel.medium, team: Team.blue)
-    ..name = 'Lee'
-    ..xp = XPLevel.beginner
-    ..team = Team.red
-    ..sayHello()
-    ..walk();
+  var player1 = Player(team: Team.blue, name: 'Son');
+  player1.sayHello();
 }
